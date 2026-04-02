@@ -1,0 +1,13 @@
+- name: Clients synchrone update
+  hosts: myhost
+  become: yes
+
+  tasks:
+    - name: Update von APT cahe
+      apt:
+        update_cache: yes
+
+    - name: System aktualisierung
+      apt: 
+        upgrade: dist
+
